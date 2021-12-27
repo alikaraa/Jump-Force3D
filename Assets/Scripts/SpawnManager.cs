@@ -13,8 +13,7 @@ public class SpawnManager : MonoBehaviour
     void Start()
     {
         playerControllerScript = GameObject.Find("Player").GetComponent<PlayerController>();
-        InvokeRepeating("SpawnObstacle", startDelay, repeatRate); // neyin kac kere kac saniye de tekrarlanicagini yazdik 
-    }
+        InvokeRepeating("SpawnObstacle", startDelay, repeatRate);
 
     // Update is called once per frame
     void Update()
@@ -23,7 +22,7 @@ public class SpawnManager : MonoBehaviour
     }
     void SpawnObstacle(){
         if(playerControllerScript.gameOver == false){
-            Instantiate(obstaclePrefab, spawnPos, obstaclePrefab.transform.rotation); // bariyer yarattik yukarda tekrarlattik InvokeRepeating sayesinde
+            Instantiate(obstaclePrefab, spawnPos, obstaclePrefab.transform.rotation); 
         }
         
     }
