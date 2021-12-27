@@ -5,7 +5,7 @@ using UnityEngine;
 public class MoveLeft : MonoBehaviour
 {
     
-    private float speed = 30; // speed degiskenini tanimladik 30 hizda olucak diye 
+    private float speed = 30; 
     private PlayerController playerControllerScript;
     private float leftBound = -15;
 
@@ -18,7 +18,7 @@ public class MoveLeft : MonoBehaviour
     void Update()
     {
         if(playerControllerScript.gameOver == false){
-            transform.Translate(Vector3.left * Time.deltaTime * speed);  //bariyer sola dogru 30 hizla gitsin diye yazdik bunu 
+            transform.Translate(Vector3.left * Time.deltaTime * speed);  
         }
         if(transform.position.x < leftBound && gameObject.CompareTag("Obstacle")){
             Destroy(gameObject);
